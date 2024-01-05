@@ -1,5 +1,4 @@
 // ------------------------------------------------------------------------
-// How To Make A Match-3 Game With HTML5 Canvas
 // Copyright (c) 2015 Rembound.com
 // 
 // This program is free software: you can redistribute it and/or modify  
@@ -35,12 +34,12 @@ window.onload = function() {
     
     // Level object
     var level = {
-        x: 250,         // X position
-        y: 113,         // Y position
-        columns: 8,     // Number of tile columns8
-        rows: 8,        // Number of tile rows8
-        tilewidth: 40,  // Visual width of a tile40
-        tileheight: 40, // Visual height of a tile40
+        x: 250,         // X position 250
+        y: 90,         // Y position 113
+        columns: 12,     // Number of tile columns8
+        rows: 12,        // Number of tile rows8
+        tilewidth: 30,  // Visual width of a tile40
+        tileheight: 30, // Visual height of a tile40
         tiles: [],      // The two-dimensional tile array
         selectedtile: { selected: false, column: 0, row: 0 }
     };
@@ -51,7 +50,7 @@ window.onload = function() {
                       [128, 128, 255],
                       [0, 255, 128],
                       [255, 128, 255],
-                      [128, 255, 255],
+                      [98, 255, 255],
                       [255, 0, 255]];
     
     // Clusters and moves that were found
@@ -72,18 +71,15 @@ window.onload = function() {
     var animationstate = 0;
     var animationtime = 0;
     var animationtimetotal = 0.3;
-    
-    // Show available moves
-    var showmoves = false;
-    
-    // The AI bot
+
     var aibot = false;
+    var showmoves = false;
     
     // Game Over
     var gameover = false;
     
     // Gui buttons
-    var buttons = [ { x: 30, y: 240, width: 150, height: 50, text: "New Game"}];
+    var buttons = [ { x: 30, y: 240, width: 150, height: 50, text: "New Game"}]; // x30 y240 w150 h50
     
     // Initialize the game
     function init() {
@@ -323,7 +319,7 @@ window.onload = function() {
         
         context.fillStyle = "#ffffff";
         context.font = "12px Verdana";
-        context.fillText("Level 1 ",13, 50);
+        context.fillText("Dedicated for WebSpace",13, 50);
     }
     
     // Draw buttons
